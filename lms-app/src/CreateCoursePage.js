@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CourseService from "./CourseService";
 
+//page for creating courses
 function CreateCoursePage() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -14,21 +15,21 @@ function CreateCoursePage() {
 
   return (
     <div>
-      <h2>Create Course</h2>
+      <h2> Create Course </h2>{" "}
       <input
         type="text"
         placeholder="Course Title"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-      />
+      />{" "}
       <textarea
         placeholder="Course Description"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
-      ></textarea>
+      ></textarea>{" "}
       <button className="btn btn-primary" onClick={handleCreate}>
-        Create
-      </button>
+        Create{" "}
+      </button>{" "}
     </div>
   );
 }

@@ -5,6 +5,7 @@ import CreateCoursePage from "./CreateCoursePage";
 import EditCoursePage from "./EditCoursePage";
 import ViewCoursePage from "./ViewCoursePage";
 import "./styles.css";
+import logo from "./logo.svg";
 
 function App() {
   return (

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import CourseService from "./CourseService";
 import styles from "./styles.css"; // Importing CSS Module
 
+//page for displaying available courses
 function CourseListPage() {
   const [courses, setCourses] = useState([]);
 
@@ -17,29 +18,32 @@ function CourseListPage() {
 
   return (
     <div>
-      <h2>Courses</h2>
+      <h2> Courses </h2>{" "}
       <Link to="/create">
-        <button className={styles.btnPrimary}>Create Course</button>
-      </Link>
+        <button className={styles.btnPrimary}> Create Course </button>{" "}
+      </Link>{" "}
       <ul className={styles.courseList}>
+        {" "}
         {courses.map((course) => (
           <li key={course.id} className={styles.courseItem}>
-            <h3>{course.title}</h3>
-            <p>{course.description}</p>
+            <h3> {course.title} </h3> <p> {course.description} </p>{" "}
             <div className={styles.btnGroup}>
               <Link to={`/view/${course.id}`}>
-                <button className={styles.btnView}>View</button>
-              </Link>
+                <button className={styles.btnView}> View </button>{" "}
+              </Link>{" "}
               <Link to={`/edit/${course.id}`}>
-                <button className={styles.btnEdit}>Edit</button>
-              </Link>
-              <button className={styles.btnDelete} onClick={() => handleDelete(course.id)}>
-                Delete
-              </button>
-            </div>
+                <button className={styles.btnEdit}> Edit </button>{" "}
+              </Link>{" "}
+              <button
+                className={styles.btnDelete}
+                onClick={() => handleDelete(course.id)}
+              >
+                Delete{" "}
+              </button>{" "}
+            </div>{" "}
           </li>
-        ))}
-      </ul>
+        ))}{" "}
+      </ul>{" "}
     </div>
   );
 }
