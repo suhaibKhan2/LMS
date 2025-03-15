@@ -1,3 +1,6 @@
+## Project Documentation
+For a detailed explanation of the project, check out the [Project DFD](docs/Learning-Management-System.md).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
