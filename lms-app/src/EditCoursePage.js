@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import CourseService from "./CourseService";
 
+//page for editing the existing courses
 function EditCoursePage() {
   const { id } = useParams();
   const [title, setTitle] = useState("");
@@ -22,21 +23,21 @@ function EditCoursePage() {
 
   return (
     <div>
-      <h2>Edit Course</h2>
+      <h2> Edit Course </h2>{" "}
       <input
         type="text"
         placeholder="Course Title"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-      />
+      />{" "}
       <textarea
         placeholder="Course Description"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
-      ></textarea>
+      ></textarea>{" "}
       <button className="btn btn-primary" onClick={handleUpdate}>
-        Update
-      </button>
+        Update{" "}
+      </button>{" "}
     </div>
   );
 }
