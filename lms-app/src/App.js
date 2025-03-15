@@ -1,5 +1,10 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import CourseListPage from "./CourseListPage";
+import CreateCoursePage from "./CreateCoursePage";
+import EditCoursePage from "./EditCoursePage";
+import ViewCoursePage from "./ViewCoursePage";
+import "./styles.css";
 
 function App() {
   return (
